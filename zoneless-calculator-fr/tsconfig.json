@@ -3,12 +3,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-
-    "baseUrl": ".",
-    "paths": {
-      "@/*" : ["src/app/*"] // esto sirve para los alias @ en vez de escribir ../../../../
-    },
-
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
