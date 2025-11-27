@@ -18,7 +18,9 @@ import { ɵEmptyOutletComponent } from '@angular/router';
   templateUrl: './calculator-button.html',
   styleUrl: './calculator-button.css',
   host: {
-    class: 'w-1/4 border-r border-b border-indigo-400',
+    class: 'border-r border-b border-indigo-400',
+    '[class.w-2/4]': 'isDoubleSize()',
+    '[class.w-1/4]': '!isDoubleSize()',
 
     // attribute: 'hola, voz de homero',
     // 'data-size': 'XL',
@@ -59,11 +61,6 @@ export class CalculatorButton /* implements OnInit */ {
   /* @HostBinding('class.is-command') get commandStyle() {
     return this.isCommmand();
   } */
-
-  // tamaño del =
-  @HostBinding('class.w-2/4') get doubleSizeStyle() {
-    return this.isDoubleSize();
-  }
 
   public keyboardPressedStyle(key: string) {
     if (!this.contentValue()) return;
