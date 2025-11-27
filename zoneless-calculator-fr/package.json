@@ -4,12 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run test && ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
+    "test:coverage": "ng test --code-coverage"
   },
   "prettier": {
-    "plugins": ["prettier-plugin-tailwindcss"],
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ],
     "printWidth": 100,
     "singleQuote": true,
     "overrides": [
@@ -35,7 +38,6 @@
     "tailwindcss": "^4.1.17",
     "tslib": "^2.3.0"
   },
-
   "devDependencies": {
     "@angular/build": "^20.3.10",
     "@angular/cli": "^20.3.10",
