@@ -34,13 +34,13 @@ describe('App', () => {
     expect(result).toBe(3);
   });
 
-  //it('should render title', () => {
-  //  const fixture = TestBed.createComponent(App);
-  //  fixture.detectChanges();
-  //
-  //  const compiled = fixture.nativeElement as HTMLElement;
-  //  console.log(compiled); // nuestro codigo HTL del app component
-  //
-  //  //expect(compiled.querySelector('h1')?.textContent).toContain('Hello, zoneless-calculator-fr');
-  //});
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    console.log(compiled); // nuestro codigo HTL del app component
+
+    //expect(compiled.querySelector('h1')?.textContent).toContain('Hello, zoneless-calculator-fr');
+  });
 });
